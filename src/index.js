@@ -82,6 +82,25 @@ var nulo = null;
  */
 }
 
+// Aula 06 - Object
+
+var pessoa = {
+  nome: "João",
+  idade: 17,
+  endereço: {
+    bairro: "Centro",
+    logradouro: "Rua trajano",
+  },
+};
+
+pessoa.nome = 'Joao';
+pessoa['nome'] = 'joao';
+pessoa.endereço.bairro = 'Centro';
+pessoa['endereço']['bairro'] = 'Centro';
+pessoa.endereço['bairro'] = 'Centro';
+pessoa.telefone = null;
+pessoa.peso = undefined;
+
 app.listen(3000, () => {
-  console.log('Server ON ;)');
+  console.log("Server ON ;)");
 });
