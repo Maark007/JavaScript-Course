@@ -54,6 +54,19 @@ nome.trim; // Remove os espaços em branco
 nome.substring(0, 5); // = Agile => Extrai a parte da string desejada
 nome.search("g"); // = 1 =Retorna a posição da string
 
+// Aula 04 - Booleans
+
+var sobrenome = "Sousa";
+{
+  /*
+  !sobrenome = false;
+  !!sobrenome = true;
+
+  ! = Negação
+  !! = afirmação
+*/
+}
+
 app.listen(3000, () => {
   console.log();
 });
