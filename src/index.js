@@ -67,6 +67,21 @@ var sobrenome = "Sousa";
 */
 }
 
+// Aula 05 - Undefined e Null
+
+var laranja;
+var nulo = null;
+
+{
+  /*
+  laranja = undefined;
+  nulo = null;
+
+  Undefined = Retorna quando consultamos uma propriedade que não exista.
+  Null = Ausencia de valor
+ */
+}
+
 app.listen(3000, () => {
-  console.log();
+  console.log('Server ON ;)');
 });
