@@ -338,6 +338,30 @@ var toHackerCase = function (text) {
   // com o operador SWITCH
 };
 
+// Aula 14 - Heranças
+
+{
+  /*
+    A propriedade PROTO nos da a referencia do protótipo do objeto
+    O Object.create determinamos o protótipo do objeto
+   */
+}
+var homem = {
+  sexo: "Masculino",
+};
+
+var joao = {
+  name: "João",
+  idade: 20,
+  _proto_: homem, // Retornara Masculino
+};
+
+Object.setPrototypeOf(joao, homem);
+var pedro = Object.create(homem);
+pedro.nome = 'Pedro';
+pedro.idade = 18;
+
 app.listen(3000, () => {
   console.log("Server ON ;)");
+  console.log(pedro.sexo);
 });
