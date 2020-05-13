@@ -245,7 +245,25 @@ var regExp = new RegExp("Expressão regular");
 var regularExp = /\d{1,2}-?\d{4}/g;
 var telefone = "(63) 4002-8922"; // Irá retornar 02-8922 devido as limitações do regex
 
+// Aula 11 - Date
+
+var hora = new Date();
+
+hora.getDate; // Retorna o dia
+hora.getDay; // Retorna o dia da semana
+hora.getFullYear; // Retorna o ano
+hora.getHours; // Retorna as Horas
+hora.getMilliseconds; // Retorna os milisegundos
+hora.getMonth; // Retorna o mes
+hora.getSeconds; // Retorna os segundos
+hora.getTime; // Retorna o tempo em milisegundos
+hora.getMonth; // Retorna a data em String
+hora.toLocaleDateString; // Retorna a data completa
+hora.toLocaleTimeString; // Retorna a hora completa
+
+var horaAtual = `${hora.toLocaleTimeString()} in ${hora.toLocaleDateString()}`;
+
 app.listen(3000, () => {
   console.log("Server ON ;)");
-  console.log(telefone.match(regularExp));
+  console.log(horaAtual);
 });
