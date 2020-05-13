@@ -101,7 +101,7 @@ pessoa.endereço["bairro"] = "Centro";
 pessoa.telefone = null;
 pessoa.peso = undefined;
 
-// Aula0 07 - Functions parte 1
+// Aula 07 - Functions parte 1
 
 function sum(a = 2, b = 1) {
   return a + b;
@@ -154,7 +154,43 @@ var Pessoa = function (nome, idade) {
   (this.nome = nome), (this.idade = idade);
 };
 
+// Aula 08 funçoes parte 2
+
+var createCounter = function () {
+  var value = 0;
+  return {
+    add: function () {
+      return ++value;
+    },
+  };
+  // Factory function
+  // Deixando a função pública
+};
+var counter = createCounter();
+
+var Counter = function () {
+  var value = 0;
+  this.add = function () {
+    return ++value;
+  };
+  // Constructor function
+  // Deixando a função pública
+};
+var newCounter = new Counter();
+
+var count = (function () {
+  var value = 0;
+  return {
+    add: function () {
+      return ++value;
+    },
+  };
+  // Auto execução
+  // () no final
+  // Revelling pattern
+})();
 
 app.listen(3000, () => {
   console.log("Server ON ;)");
+  console.log(newCounter.add());
 });
