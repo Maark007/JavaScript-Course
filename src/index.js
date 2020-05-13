@@ -190,7 +190,36 @@ var count = (function () {
   // Revelling pattern
 })();
 
+// Aula 09 - Arrays
+
+var carros = [];
+carros[0] = "Ford";
+carros[1] = "Chevrolet";
+carros[2] = "Golf";
+var motos = new Array();
+motos[0] = "Honda";
+motos[1] = "Susuki";
+motos[2] = "Harley Deividson";
+
+motos.toString(); // Transforma em um texto
+motos.lenght; // calcula os items
+motos.push(); // insere elementos no final do Array
+motos.pop(); // remove o ultimo elemento do Array
+motos.unshift(); // insere elementos no começo do Array
+motos.shift(); // remove o primeiro elemento do Array
+motos.indexOf(); // localizar o indice de um elemento
+
+motos.forEach(function (elemento) {
+  // Mapeia cada elemento, podemos fazer qualque coisa.
+});
+motos.filter(function (elemento) {
+  return elemento.marca === "Ford";
+  // Só ira retorna os valores com os parametros acima.
+});
+
+var veiculos = carros.concat(motos);
+
 app.listen(3000, () => {
   console.log("Server ON ;)");
-  console.log(newCounter.add());
+  console.log(veiculos);
 });
