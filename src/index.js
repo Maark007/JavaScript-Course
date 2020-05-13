@@ -217,9 +217,35 @@ motos.filter(function (elemento) {
   // Só ira retorna os valores com os parametros acima.
 });
 
-var veiculos = carros.concat(motos);
+var veiculos = carros.concat(motos); // Concatenam os arrays
+
+// Aula 10 - Expressões Regulares(regex)
+
+var regExp = /<'Expressão Regular'>/;
+var regExp = new RegExp("Expressão regular");
+
+{
+  /*
+   exec - Executa a RegExp, retornando os detalhes.
+   test - Testa o RegExp, retornando true ou false.
+
+    ^ - Inicia com um determinado caractere.
+    $ - Finaliza com um determinado caractere.
+    [abc] - Aceita qualquer caractere dentro do grupo
+    [^abc] - Não aceita qualquer caractere dentro do grupo
+    [0-9] - Aceita qualquer caractere dentro do grupo
+    [^0-9] - Não aceita qualquer caractere dentro do grupo
+    {n,m} - Quantifica um número mínimo e máximo
+    ? - Zero ou um
+    * - Zero ou mais
+    + - um ou mais
+  */
+}
+
+var regularExp = /\d{1,2}-?\d{4}/g;
+var telefone = "(63) 4002-8922"; // Irá retornar 02-8922 devido as limitações do regex
 
 app.listen(3000, () => {
   console.log("Server ON ;)");
-  console.log(veiculos);
+  console.log(telefone.match(regularExp));
 });
