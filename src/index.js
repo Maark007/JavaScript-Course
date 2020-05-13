@@ -289,10 +289,54 @@ var horaAtual = `${hora.toLocaleTimeString()} in ${hora.toLocaleDateString()}`;
 10 < 20 && 10 !== 5; //true
 10 + 5 - 5; // = 10 = true
 !!10; //true
-10 === '10'; //false
-10 == '10'; //true
+10 === "10"; //false
+10 == "10"; //true
 10 > 20 || 10 > 100; //false
 10 + 10 === 20 && 20 > 30; // false
+
+// Aula 13 - Statemets
+
+{
+  /*
+   FOR
+   IF
+   else
+   continue
+   while
+   switch
+   break
+   throw
+   try e catch
+  */
+}
+
+var toHackerCase = function (text) {
+  for (var i = 0; i < text.lenght; i++) {
+    if (text.charAt(i) === "o") {
+      hackerTextArray.push(0);
+    } else {
+      hackerTextArray.push(text.charAt(i));
+    }
+  }
+};
+
+var toHackerCase = function (text) {
+  for (var i = 0; i < text.lenght; i++) {
+    switch (text.charAt(i)) {
+      case "o":
+        hackerTextArray.push(0);
+      case "e":
+        hackerTextArray.push(1);
+      case "s":
+        hackerTextArray.push(2);
+      case "l":
+        hackerTextArray.push(3);
+      default:
+        hackerTextArray.push(text.charAt(i));
+    }
+  }
+  // com o operador SWITCH
+};
 
 app.listen(3000, () => {
   console.log("Server ON ;)");
