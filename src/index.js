@@ -263,7 +263,37 @@ hora.toLocaleTimeString; // Retorna a hora completa
 
 var horaAtual = `${hora.toLocaleTimeString()} in ${hora.toLocaleDateString()}`;
 
+// Aula 12 - Operadores
+
+{
+  /*
+    Lógicos
+      || = ou
+      && = e
+      ! = negação
+      !! = afirmação
+      !== = diferente de
+      === = igual ao tipo e o valor
+    Aritméticos
+      + = adição
+      - = subtração
+      * = multiplicação
+      % = resto da divisão
+      / = divisão
+    Operador Ternário
+
+  */
+}
+
+10 === 10; // true
+10 < 20 && 10 !== 5; //true
+10 + 5 - 5; // = 10 = true
+!!10; //true
+10 === '10'; //false
+10 == '10'; //true
+10 > 20 || 10 > 100; //false
+10 + 10 === 20 && 20 > 30; // false
+
 app.listen(3000, () => {
   console.log("Server ON ;)");
-  console.log(horaAtual);
 });
