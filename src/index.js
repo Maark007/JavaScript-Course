@@ -93,13 +93,67 @@ var pessoa = {
   },
 };
 
-pessoa.nome = 'Joao';
-pessoa['nome'] = 'joao';
-pessoa.endereço.bairro = 'Centro';
-pessoa['endereço']['bairro'] = 'Centro';
-pessoa.endereço['bairro'] = 'Centro';
+pessoa.nome = "Joao";
+pessoa["nome"] = "joao";
+pessoa.endereço.bairro = "Centro";
+pessoa["endereço"]["bairro"] = "Centro";
+pessoa.endereço["bairro"] = "Centro";
 pessoa.telefone = null;
 pessoa.peso = undefined;
+
+// Aula0 07 - Functions parte 1
+
+function sum(a = 2, b = 1) {
+  return a + b;
+  // Function Declaration
+  // Carregada antes da interpretação do código
+}
+
+var secondSum = function (a, b) {
+  return a + b;
+  // Function Expression
+  // Carregada durante a interpretação do código
+};
+
+thirdSum = (a = 5, b = 5) => {
+  return a + b;
+  // Arrow Function
+  // Carregada durante a interpretação do código
+};
+
+var helloWorld = function () {
+  return function () {
+    return function () {
+      return "Hello World!";
+    };
+  };
+  // Chamadas de Inner functions
+  // Para acessar funções dentro de funcões temos que chama-las mais de uma vez.
+  // por exemplo: console.log(helloWorld()()())
+};
+
+var pessoa = {
+  nome: "Joao",
+  idade: 20,
+  getIdade: function () {
+    return this.idade;
+  },
+  // Utilizamos o this para o código perceber que a idade vem de 'dentro do objeto'
+};
+
+// Funções Fábrica = Reutilizamos objetos.
+var criarPessoa = function (nome, idade) {
+  return {
+    nome: nome,
+    idade: idade,
+  };
+};
+
+// Funções Construtoras = Utilizamos o operador NEW, onde criamos objetos.
+var Pessoa = function (nome, idade) {
+  (this.nome = nome), (this.idade = idade);
+};
+
 
 app.listen(3000, () => {
   console.log("Server ON ;)");
