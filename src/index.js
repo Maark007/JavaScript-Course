@@ -358,10 +358,36 @@ var joao = {
 
 Object.setPrototypeOf(joao, homem);
 var pedro = Object.create(homem);
-pedro.nome = 'Pedro';
+pedro.nome = "Pedro";
 pedro.idade = 18;
 
+// Aula 15 Herança parte 2
+
+var Homem = function (nome, idade) {
+  this.nome = nome;
+  this.idade = idade;
+  this.sexo = "Masculino";
+  // Utilizando o operador NEW
+};
+
+Homem.prototype.sexo = "Masculino";
+
+var joao = new Homem("Joao", 20);
+
+{
+  /*
+  Difrenças =>
+   [[prototype]] = Abstrato, conceito de protótipo.
+   prototype = Propridade existente somente em funçoes.
+
+   Usar o operador NEW em funções construtoras
+  */
+}
+var pedro = {};
+pedro._proto_ = Homem.prototype;
+Homem.apply(pedro, ["Pedro", 18]);
+
 app.listen(3000, () => {
-  console.log("Server ON ;)");
+  console.log("Server ON ;) ");
   console.log(pedro.sexo);
 });
